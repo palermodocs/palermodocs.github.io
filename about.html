@@ -104,7 +104,15 @@ body {
   #logo {
   width: 3.2em;
 }
+    #navbar-right {
+    display: none;
+  }
 }
+    
+    #icon:hover {
+    background: #ddd !important;
+    color: black !important;
+  }
 
 button {
   background: #ededed;
@@ -139,9 +147,20 @@ mobile { display: none; }
     <a href="/about">About</a>
     <a href="/contact">Contact</a>
   </div>
+    <a id="icon" class="mobile" style="display: none; background: black; position: absolute; right: 0; top: 0" href="javascript:void(0);" class="icon" onclick="openLinks()">
+    <i class="fa fa-bars"></i>
+  </a>
 </div>
 
 <script>
+    function openLinks() {
+  var x = document.getElementById("navbar-right");
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";
+  }
+}
 window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {
