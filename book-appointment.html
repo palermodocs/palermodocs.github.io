@@ -4,6 +4,7 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Palermo Docs</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="bootstrap.min.css">
     <link rel="icon" href="logo.jpg">
 <script src='https://www.google.com/recaptcha/api.js'></script>
@@ -49,6 +50,10 @@ body {
   top: 0;
   z-index: 99;
 }
+    #icon:hover {
+    background: #ddd;
+    color: black;
+  }
 
 #navbar a {
   float: left;
@@ -100,6 +105,9 @@ body {
   #logo {
   width: 3.2em;
 }
+    #navbar-right {
+    display: none;
+  }
 }
 
 button {
@@ -133,6 +141,9 @@ a {
     <a href="/about">About</a>
     <a href="/contact">Contact</a>
   </div>
+    <a id="icon" class="mobile" style="display: none; background: black; position: absolute; right: 0; top: 0" href="javascript:void(0);" class="icon" onclick="openLinks()">
+    <i class="fa fa-bars"></i>
+  </a>
 </div>
 
 <script>
@@ -214,6 +225,14 @@ function scrollFunction() {
 </form>
 
 <script>
+    function openLinks() {
+  var x = document.getElementById("navbar-right");
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";
+  }
+}
 // Example starter JavaScript for disabling form submissions if there are invalid fields
 (function () {
   'use strict'
