@@ -252,9 +252,20 @@ mobile { display: none; }
     <a href="/about">About</a>
     <a href="/contact">Contact</a>
   </div>
+  <a class="mobile" style="display: none;" href="javascript:void(0);" class="icon" onclick="openLinks()">
+    <i class="fa fa-bars"></i>
+  </a>
 </div>
 
 <script>
+function openLinks() {
+  var x = document.getElementById("navbar-right");
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";
+  }
+}
 window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {
