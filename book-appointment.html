@@ -147,6 +147,14 @@ a {
 </div>
 
 <script>
+    function openLinks() {
+  var x = document.getElementById("navbar-right");
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";
+  }
+}
 window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {
@@ -225,14 +233,6 @@ function scrollFunction() {
 </form>
 
 <script>
-    function openLinks() {
-  var x = document.getElementById("navbar-right");
-  if (x.style.display === "block") {
-    x.style.display = "none";
-  } else {
-    x.style.display = "block";
-  }
-}
 // Example starter JavaScript for disabling form submissions if there are invalid fields
 (function () {
   'use strict'
